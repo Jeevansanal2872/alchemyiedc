@@ -5,7 +5,7 @@ footer {
   padding: 48px 0;
   text-align: center;
   color: white;
-  background-image: url(/footer/svg/svg-image-120.svg);
+  background-image: url(./svg/svg-image-120.svg);
 }
 
 /* responsive */
