@@ -317,7 +317,7 @@
    background: rgb(82, 82, 217);
    color: white;
    transform: translateY(-3px);
-  box-shadow: 0 4px 0 #000000;
+   box-shadow: 0 4px 0 #000000;
 
 
  }
@@ -386,49 +386,15 @@
  /* Collaborators Section */
  .collaborators {
    text-align: center;
-   padding: 3rem 1rem;
-   background: #fdf5c9;
-   /* match cartoon theme */
- }
-
- .collaborators h2 {
-   font-size: 2rem;
-   margin-bottom: 2rem;
-   color: #222;
- }
-
- .collab-logos {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 2rem;
- }
-
- .collab-logos img {
-   height: 50px;
-   /* keep logos small */
-   width: auto;
-   object-fit: contain;
-   filter: drop-shadow(2px 2px 0 #000);
-   /* cartoon effect */
-   transition: transform 0.3s ease;
- }
-
- .collab-logos img:hover {
-   transform: scale(1.1) rotate(-2deg);
-   /* fun hover */
- }
-
- /* Collaborators (drop this where your other CSS lives) */
- .collaborators {
    padding: 2.5rem 1rem;
    background: #2e2e2d;
-   text-align: center;
+   /* keep dark theme */
  }
 
  .collaborators h2 {
-   font-size: 1.6rem;
-   color: #ffffff;
+   font-size: 1.8rem;
+   margin-bottom: 2rem;
+   color: #fff;
  }
 
  /* logos row */
@@ -436,72 +402,85 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   gap: 1rem;
+   gap: 2rem;
    align-items: center;
  }
 
- /* each logo wrapper — keeps logos small & consistent */
+ /* each logo wrapper */
  .logo-item {
    width: 200px;
-   /* control visible size */
-   height: 56px;
+   /* consistent size */
+   height: auto;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 6px;
+   padding: 10px;
    border-radius: 8px;
-   overflow: hidden;
+   overflow: visible;
+   /* allow hover effect outside */
+   transition: transform 0.3s ease;
  }
 
- /* actual image sizing — will not exceed wrapper */
+ #tink {
+   max-height: 120px;
+   max-width: 100%;
+ }
+
+ /* logo images */
  .logo-item img {
-   max-height: 300px;
-   max-width: 1000%;
+   max-width: 100%;
    object-fit: contain;
    display: block;
-   width: 100%;
-   height: 800%;
+   filter: drop-shadow(2px 2px 0 #000);
+   /* cartoon effect */
+   transition: transform 0.3s ease;
  }
 
- .tink img {
-   width: 100%;
-   height: 800%;
+ /* hover effect */
+ .logo-item:hover img {
+   transform: scale(1.15) rotate(-3deg);
  }
 
- /* responsive: smaller on very small screens */
- @media (max-width: 420px) {
+ /* responsive */
+ @media (max-width: 480px) {
    .logo-item {
-     width: 72px;
-     height: 46px;
+     width: 100px;
+     padding: 6px;
    }
 
    .logo-item img {
-     max-height: 32px;
+     max-height: 40px;
    }
  }
 
+ /* Create Partner block */
  .create-partner {
-  text-align: center;
-}
+   text-align: center;
+ }
 
-.create-partner img {
-  height: 60px;
-  margin-bottom: 8px;
-  filter: drop-shadow(2px 2px 0 #000);
-}
+ .create-partner img {
+   height: 60px;
+   margin-bottom: 8px;
+   filter: drop-shadow(2px 2px 0 #000);
+ }
 
-.create-partner h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ffffff;
-}
+ .create-partner h3 {
+   font-size: 1.2rem;
+   font-weight: 700;
+   color: #ffffff;
+ }
 
-#footer-phones a {
-  color: var(--muted);
+
+ #footer-phones a {
+   color: var(--muted);
+   text-decoration: none;
+   transition: 0.3s;
+ }
+
+ #footer-phones a:hover {
+   color: #fff;
+   cursor: pointer;
+ }
+ body  a {
   text-decoration: none;
-  transition: 0.3s;
-}
-#footer-phones a:hover {
-  color: #fff;
-  cursor: pointer;
-}
+ }
