@@ -39,7 +39,9 @@ function createMemberCard(member, role) {
   
   const img = document.createElement('img');
   img.src = member.image;
-  img.className = `profile ${member.name.split(' ')[0]}`;
+  // Generate CSS-friendly class name from first name (lowercase, no spaces)
+  const firstName = member.name.split(' ')[0].toLowerCase();
+  img.className = `profile profile-${firstName}`;
   img.alt = member.name;
   
   // Handle image load error - optional fallback or just let it break
